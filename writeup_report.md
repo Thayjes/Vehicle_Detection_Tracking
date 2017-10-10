@@ -35,7 +35,7 @@ You're reading it!
 
 #### 1. Explain how (and identify where in your code) you extracted HOG features from the training images.
 
-The code for this step is contained in the first code cell of the IPython notebook (or in lines # through # of the file called `some_file.py`).  
+The code for this step is contained in `Extract_Features.ipynb`.
 
 I started by reading in all the `vehicle` and `non-vehicle` images using the `Data_Look.ipynb` notebook.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
@@ -52,15 +52,18 @@ Here is an example using the `LUV` color space and HOG parameters of `orientatio
 
 I tried various combinations of parameters and after plenty of testing settled on the above choice. The testing involved inspecting the hog images of car and noncar images for various parameters. And identifying which parameters highlighted the difference between them, as well as were specific to each class.
 
-####3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
+#### 3. Describe how (and identify where in your code) you trained a classifier using your selected HOG features (and color features if you used them).
 
-I trained a linear SVM using...
+I trained a linear SVM using HOG, color histogram and spatial features. This code was executed in the IPython Notebook `Train_Store_Classifier.ipynb`. The parameters is I used to extract the features were:
+Color: Number of Bins = 32, Bins_Range = (0, 1)
+Spatial: Size = (32, 32)
+HOG: Orientation = 9, Pixel Per Cell = (8, 8), Cells Per Block = (2, 2)
 
 ### Sliding Window Search
 
 #### 1. Describe how (and identify where in your code) you implemented a sliding window search.  How did you decide what scales to search and how much to overlap windows?
 
-I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
+I implemented a sliding window search in the `Hog_Sub_Sampling.ipynb` notebook, in the function `find_cars()`. I initially used cells_per_step = 2, but with this I got too few windows, and I could not effectively fill up my heatmap to find the car. I decreased the cells_per_step = 1, so 87.5% overlap, and this gave better results. For a similar reason I selected scales of 1.50, 1.75 and 1.85 to search. This allowed a good heatmap to track the vehicles.
 
 ![alt text][image3]
 
