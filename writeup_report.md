@@ -16,7 +16,12 @@ The goals / steps of this project are the following:
 [image1]: ./writeup_images/carvsnoncar.jpg
 [image2]: ./writeup_images/carhogvsnoncarhog.jpg
 [image3]: ./writeup_images/sliding_window.jpg
-[image4]: ./examples/sliding_window.jpg
+[image8]: ./writeup_images/test_images1.jpg
+[image9]: ./writeup_images/test_images2.jpg
+[image10]: ./writeup_images/test_images3.jpg
+[image11]: ./writeup_images/test_images4.jpg
+[image12]: ./writeup_images/test_images5.jpg
+[image13]: ./writeup_images/test_images6.jpg
 [image5]: ./writeup_images/heatmap_after_threshold.jpg
 [image6]: ./writeup_images/heatmap_labels.jpg
 [image7]: ./writeup_images/final_image.jpg
@@ -69,8 +74,13 @@ I implemented a sliding window search in the `Hog_Sub_Sampling.ipynb` notebook, 
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on three scales using LUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. 
----
+Ultimately I searched on three scales using LUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. Here are the results on the test images.
+![alt text][image8]
+![alt text][image9]
+![alt text][image10]
+![alt text][image11]
+![alt text][image12]
+![alt text][image13]
 
 ### Video Implementation
 
