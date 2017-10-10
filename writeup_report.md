@@ -20,7 +20,7 @@ The goals / steps of this project are the following:
 [image5]: ./writeup_images/heatmap_after_threshold.jpg
 [image6]: ./writeup_images/heatmap_labels.jpg
 [image7]: ./writeup_images/final_image.jpg
-[video1]: ./project_video.mp4
+[video1]: ./project_video_solution.mp4
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/513/view) Points
 ###Here I will consider the rubric points individually and describe how I addressed each point in my implementation.  
@@ -69,9 +69,7 @@ I implemented a sliding window search in the `Hog_Sub_Sampling.ipynb` notebook, 
 
 #### 2. Show some examples of test images to demonstrate how your pipeline is working.  What did you do to optimize the performance of your classifier?
 
-Ultimately I searched on three scales using LUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
-
-![alt text][image4]
+Ultimately I searched on three scales using LUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result. 
 ---
 
 ### Video Implementation
